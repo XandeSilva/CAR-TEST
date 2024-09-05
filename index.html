@@ -110,25 +110,26 @@
 
     .figlet {
     font-family: monospace;
-    white-space: pre-wrap;
-    font-size: 5px; /* Tamanho base pequeno */
-    line-height: 1;
+    white-space: pre;
+    font-size: 10px; /* Tamanho pequeno fixo */
+    line-height: 1; 
     text-align: center;
     margin: 20px 0;
-    overflow-x: auto;
+    overflow-x: auto; /* Permite rolagem horizontal caso o texto ultrapasse a largura da tela */
 }
 
 @media (max-width: 768px) {
     .figlet {
-        font-size: 14px; /* Reduz o tamanho da fonte em tablets e celulares */
+        font-size: 8px; /* Tamanho menor para telas de tablets ou smartphones */
     }
 }
 
 @media (max-width: 480px) {
     .figlet {
-        font-size: 12px; /* Reduz ainda mais para smartphones */
+        font-size: 6px; /* Tamanho ainda menor para smartphones */
     }
 }
+
 
 
 
