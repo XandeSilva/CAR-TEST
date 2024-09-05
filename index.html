@@ -10,8 +10,8 @@
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
-        font-size: 20px;
         color: #000000;
+        font-size: 20px;
     }
 
     header {
@@ -118,11 +118,12 @@
 
     .figlet {
         font-family: monospace;
-        white-space: pre;
-        font-size: 10px; /* Tamanho fixo pequeno */
-        line-height: 1.2; 
+        white-space: pre-wrap; /* Ajusta o texto conforme o contêiner */
+        font-size: 10px; /* Ajuste o tamanho da fonte conforme necessário */
+        line-height: 1.2;
         text-align: center;
         margin: 0;
+        word-wrap: break-word; /* Quebra as palavras longas */
     }
 
     @media (max-width: 768px) {
@@ -167,12 +168,12 @@ function adjustFontSize(action) {
 
 <div class="figlet-container">
     <pre class="figlet">
-██████╗████████╗    ██████╗ ███████╗███████╗████████╗██████╗  ██████╗ ██╗   ██╗███████╗██████╗ 
-██╔════╝╚══██╔══╝    ██╔══██╗██╔════╝██╔════╝╚══██╔══╝██╔══██╗██╔═══██╗╚██╗ ██╔╝██╔════╝██╔══██╗
-██║  ███╗  ██║       ██║  ██║█████╗  ███████╗   ██║   ██████╔╝██║   ██║ ╚████╔╝ █████╗  ██████╔╝
-██║   ██║  ██║       ██║  ██║██╔══╝  ╚════██║   ██║   ██╔══██╗██║   ██║  ╚██╔╝  ██╔══╝  ██╔══██╗
-╚██████╔╝  ██║       ██████╔╝███████╗███████║   ██║   ██║  ██║╚██████╔╝   ██║   ███████╗██║  ██║
- ╚═════╝   ╚═╝       ╚═════╝ ╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+██████╗ █████████╗ ██████╗ ███████╗███████╗████████╗██████╗  ██████╗ ██╗   ██╗███████╗██████╗ 
+██╔══██╗╚══██╔══╝██╔══██╗██╔════╝██╔════╝╚══██╔══╝██╔══██╗██╔═══██╗╚██╗ ██╔╝██╔════╝██╔══██╗
+███████║   ██║   ██████╔╝█████╗  ███████╗   ██║   ██████╔╝██║   ██║ ╚████╔╝ █████╗  ██████╔╝
+██╔══██║   ██║   ██╔══██╗██╔══╝  ╚════██║   ██║   ██╔══██╗██║   ██║  ╚██╔╝  ██╔══╝  ██╔══██╗
+██║  ██║   ██║   ██████╔╝███████╗███████║   ██║   ██║  ██║╚██████╔╝   ██║   ███████╗██║  ██║
+╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
     </pre>
 </div>
 
@@ -211,11 +212,9 @@ function adjustFontSize(action) {
         <ul>
             <li>Limpe o carrinho cortador de grama após cada uso para remover resíduos de grama e sujeira.</li>
             <li>Realize manutenções periódicas, como a afiação das lâminas e a verificação das conexões elétricas, conforme indicado no manual do usuário.</li>
-            <li>Substitua quaisquer peças desgastadas ou danificadas para garantir a longevidade e o desempenho ideal do equipamento.</li>
-            <li>Lembre que o carrinho não é 100% a prova de aguá então tome cuidado com a chuva.</li>
+            <li>Substitua quaisquer peças desgastadas ou danificadas imediatamente.</li>
         </ul>
-
-        <h3>Cuidados Com o Controle</h3>
+        <h3>Cuidados com o Controle Remoto</h3>
         <ul>
             <li>Evite expor o controle remoto à umidade e temperaturas extremas.</li>
             <li>Verifique regularmente as pilhas do controle e substitua-as conforme necessário.</li>
