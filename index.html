@@ -111,30 +111,29 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow-x: auto; /* Permite rolagem horizontal */
+        overflow: hidden; /* Garante que não haja rolagem */
         padding: 20px;
         box-sizing: border-box;
     }
 
     .figlet {
         font-family: monospace;
-        white-space: pre-wrap; /* Ajusta o texto conforme o contêiner */
-        font-size: 10px; /* Ajuste o tamanho da fonte conforme necessário */
+        white-space: pre; /* Evita quebra de linha automática */
+        font-size: 16px; /* Tamanho de fonte ajustado */
         line-height: 1.2;
         text-align: center;
         margin: 0;
-        word-wrap: break-word; /* Quebra as palavras longas */
     }
 
     @media (max-width: 768px) {
         .figlet {
-            font-size: 8px; /* Reduz o tamanho da fonte em tablets e celulares */
+            font-size: 14px; /* Reduz o tamanho da fonte em tablets */
         }
     }
 
     @media (max-width: 480px) {
         .figlet {
-            font-size: 6px; /* Reduz ainda mais para smartphones */
+            font-size: 12px; /* Reduz ainda mais para smartphones */
         }
     }
 </style>
@@ -211,8 +210,30 @@ function adjustFontSize(action) {
         <h3>Manutenção Regular</h3>
         <ul>
             <li>Limpe o carrinho cortador de grama após cada uso para remover resíduos de grama e sujeira.</li>
-            <li>Realize manutenções periódicas, como a afiação das lâminas e a verificação das conexões elétricas, conforme indicado no manual do usuário.</li>
-            <li>Substitua quaisquer peças desgastadas ou danificadas imediatamente.</li>
+            <li>Realize manutenções periódicas, como a afiação das lâminas e a verificação das conexões elétricas, conforme recomendado no manual do fabricante.</li>
+            <li>Armazene o carrinho em local seco e ventilado para evitar ferrugem e deterioração dos componentes.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Cuidados Adicionais</h2>
+        <h3>Cuidados com o Carrinho Cortador de Grama</h3>
+        <ul>
+            <li>Evite expor o carrinho a condições climáticas extremas, como chuva intensa e temperaturas muito baixas.</li>
+            <li>Não utilize o carrinho em terrenos irregulares ou em áreas com grandes pedras ou buracos.</li>
+            <li>Não sobrecarregue o carrinho com objetos pesados ou materiais que possam obstruir o funcionamento.</li>
+        </ul>
+        <h3>Cuidados com as Lâminas</h3>
+        <ul>
+            <li>Verifique regularmente o estado das lâminas e substitua-as quando necessário.</li>
+            <li>Certifique-se de que as lâminas estejam corretamente alinhadas e fixadas antes de operar o carrinho.</li>
+            <li>Não tente ajustar as lâminas enquanto o carrinho estiver em funcionamento.</li>
+        </ul>
+        <h3>Cuidados com a Bateria</h3>
+        <ul>
+            <li>Não deixe a bateria do carrinho descarregar completamente. Carregue-a sempre que o nível de carga estiver baixo.</li>
+            <li>Não exponha a bateria a temperaturas extremas ou umidade.</li>
+            <li>Armazene a bateria em um local seco e fresco quando não estiver em uso.</li>
         </ul>
         <h3>Cuidados com o Controle Remoto</h3>
         <ul>
