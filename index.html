@@ -10,8 +10,9 @@
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
-        color: #000000;
+        background-size: cover;
         font-size: 20px;
+        color: #000000;
     }
 
     header {
@@ -24,9 +25,9 @@
     }
 
     .textINTRO {
-        font-size: 200%;
-        text-align: center;
-        font-family: 'Roboto';
+       font-size: 200%;
+       text-align: center;
+       font-family: 'Roboto';
     }
 
     main {
@@ -107,40 +108,97 @@
         transform: scale(1);
     }
 
-    .figlet-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
     .figlet {
         font-family: monospace;
         white-space: pre;
-        font-size: 16px; /* Ajuste conforme necessário */
-        line-height: 1.2;
+        font-size: 6px; /* Aumentar o tamanho da fonte */
+        line-height: 1;
         text-align: center;
-        margin: 0;
-        max-width: 100%;
-        overflow-wrap: break-word;
+        margin: 20px 0;
+    }
+
+    h3 {
+        font-family: 'Playfair Display', serif;
+        color: black;
+        font-weight: bold;
+    }
+
+    li {
+        font-family: 'Playfair Display', serif;
+        color: #1C1C1C;
+        font-weight: 400;
     }
 
     @media (max-width: 768px) {
+        .TEXTCAB {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .font-size-buttons {
+            margin-top: 10px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        main {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        header, footer {
+            padding: 10px;
+        }
+
         .figlet {
-            font-size: 14px;
+            font-family: monospace;
+            white-space: pre;
+            font-size: 5px; /* Ajuste este valor para diminuir ou aumentar o tamanho do figlet */
+            line-height: 1; /* Mantém o espaçamento entre linhas consistente */
+            width: 80%;
+            margin: 0 auto;
         }
     }
 
     @media (max-width: 480px) {
-        .figlet {
-            font-size: 12px;
+        .TEXTCAB {
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .font-size-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 5px;
+        }
+
+        main {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        header, footer {
+            padding: 5px;
         }
     }
 </style>
+
+<script>
+function adjustFontSize(action) {
+    const body = document.body;
+    let currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
+
+    if (action === 'increase') {
+        currentSize += 2;
+    } else if (action === 'decrease') {
+        currentSize -= 2;
+    }
+
+    body.style.fontSize = currentSize + 'px';
+}
+</script>
+
 </head>
 <body>
 <header>
@@ -153,31 +211,76 @@
     </div>
 </header>
 
-<div class="figlet-container">
-    <pre class="figlet">
-   ____   _____     ____    _____   ____    _____   ____     ___   __   __  _____   ____  
-  / ___| |_   _|   |  _ \  | ____| / ___|  |_   _| |  _ \   / _ \  \ \ / / | ____| |  _ \ 
- | |  _    | |     | | | | |  _|   \___ \    | |   | |_) | | | | |  \ V /  |  _|   | |_) |
- | |_| |   | |     | |_| | | |___   ___) |   | |   |  _ <  | |_| |   | |   | |___  |  _ < 
-  \____|   |_|     |____/  |_____| |____/    |_|   |_| \_\  \___/    |_|   |_____| |_| \_\
-                                                                                          
+<div class="figlet">
+    <pre>
+ ____    ______  ____    ____    ____    ______  ____    _____    __    __  ____    ____       
+/\  _`\ /\__  _\/\  _`\ /\  _`\ /\  _`\ /\__  _\/\  _`\ /\  __`\ /\ \  /\ \/\  _`\ /\  _`\     
+\ \ \L\_\/_/\ \/\ \ \/\ \ \ \L\_\ \,\L\_\/_/\ \/\ \ \L\ \ \ \/\ \\ `\`\\/'/\ \ \L\_\ \ \L\ \   
+ \ \ \L_L  \ \ \ \ \ \ \ \ \  _\L\/_\__ \  \ \ \ \ \ ,  /\ \ \ \ \`\ `\ /'  \ \  _\L\ \ ,  /   
+  \ \ \/, \ \ \ \ \ \ \_\ \ \ \L\ \/\ \L\ \ \ \ \ \ \ \\ \\ \ \_\ \ `\ \ \   \ \ \L\ \ \ \\ \  
+   \ \____/  \ \_\ \ \____/\ \____/\ `\____\ \ \_\ \ \_\ \_\ \_____\  \ \_\   \ \____/\ \_\ \_\
+    \/___/    \/_/  \/___/  \/___/  \/_____/  \/_/  \/_/\/ /\/_____/   \/_/    \/___/  \/_/\/ /
     </pre>
 </div>
 
 <main>
     <section>
         <h2>Instruções de Uso</h2>
-        <!-- Conteúdo das instruções -->
-    </section>
+        <h3>Preparação do Carrinho</h3>
+        <ul>
+            <li>Antes de iniciar o corte, certifique-se de que o carrinho cortador de grama esteja totalmente carregado e em boas condições de funcionamento.</li>
+            <li>Verifique se o Fio de Nylon estão devidamente instalados.</li>
+        </ul>
+        <h3>Configuração Inicial</h3>
+        <ul>
+            <li>Acione o cortador de grama utilizando o botão de energia situado na unidade principal.</li>
+            <li>Verifique a conexão entre o controle remoto e o carrinho, assegurando que ambos os dispositivos estejam sincronizados corretamente.</li>
+            <li>Observe se o carrinho e o controle estão com bateria necessaria para o seu funcionamento. </li>
+        </ul>
+        <h3>Operação do Controle Remoto</h3>
+        <ul>
+            <li>Utilize o controle remoto para direcionar o carrinho. Familiarize-se com os comandos de movimentação: para frente, para trás, esquerda, direita e parada.</li>
+            <li>Lembrando que X ativa o motor esquerdo e Y o motor direito. </li>
+        </ul>
+        <h3>Durante o Corte</h3>
+        <ul>
+            <li>Monitore o carrinho enquanto ele opera. Evite obstáculos como pedras, brinquedos ou outros objetos que possam danificar o equipamento ou causar acidentes.</li>
+            <li>Mantenha uma distância segura do carrinho em funcionamento para evitar possíveis lesões.</li>
+            <li>Mantenha uma distancia segura de Pessoas quando o carrinho estiver em funcionamento. </li>
+        </ul>
+        <h3>Finalização</h3>
+        <ul>
+            <li>Após concluir o corte, desligue o cortador de grama e o controle remoto.</li>
+            <li>Faça uma inspeção visual para assegurar que não haja danos nas lâminas ou no equipamento.</li>
+            <li>Guarde o carrinho em um local seco e seguro, protegido da exposição direta ao sol e da umidade.</li>
+        </ul>
+        <h3>Manutenção Regular</h3>
+        <ul>
+            <li>Limpe o carrinho cortador de grama após cada uso para remover resíduos de grama e sujeira.</li>
+            <li>Realize manutenções periódicas, como a afiação das lâminas e a verificação das conexões elétricas, conforme indicado no manual do usuário.</li>
+            <li>Substitua quaisquer peças desgastadas ou danificadas para garantir a longevidade e o desempenho ideal do equipamento.</li>
+            <li>Lembre que o carrinho não é 100% a prova de aguá então tome cuidado com a chuva.</li>
+        </ul>
 
-    <section>
-        <h2>Cuidados Adicionais</h2>
-        <!-- Conteúdo dos cuidados adicionais -->
+        <h3>Cuidados Com o Controle</h3>
+        <ul>
+           <li>certifique-se de sempre verificar se a bateria do controle esta com 100% da sua capacidade.</li>
+           <li>Lembre-se  que em caso de chuva o controle não é resistente a água.</li>
+           <li>Sempre manter o controle limpo.</li>
+           <li>O controle leva 5 a 8 Horas para descarregar a bateria.</li> 
+        </ul>
+        
+        <h3>O que não se deve fazer em hipótese alguma.</h3>
+        <ul>
+           <li>Jamis troque o fio de corte por qualquer outro objeto cortante (pode ocorrer acidentes).</li>
+           <li>Não altere as peças do carrinho.</li>
+           <li>Nunca desmonte o carrinho, pois isso pode causar mau funcionamento.</li>
+        </ul>
     </section>
 </main>
 
 <footer>
-    <p>© 2024 Manual do Usuário - Todos os direitos reservados.</p>
+    <p>Desenvolvido por Alexandre Nogueira, Alison Proença, Gabriel Gomes e Ana Camargo.</p>
 </footer>
 </body>
 </html>
