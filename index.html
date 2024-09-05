@@ -111,12 +111,25 @@
     .figlet {
     font-family: monospace;
     white-space: pre-wrap;
-    font-size: 0.3vw; /* Tamanho reduzido */
+    font-size: 16px; /* Tamanho base pequeno */
     line-height: 1;
     text-align: center;
     margin: 20px 0;
-    overflow-x: auto; /* Permite rolagem horizontal */
+    overflow-x: auto;
 }
+
+@media (max-width: 768px) {
+    .figlet {
+        font-size: 14px; /* Reduz o tamanho da fonte em tablets e celulares */
+    }
+}
+
+@media (max-width: 480px) {
+    .figlet {
+        font-size: 12px; /* Reduz ainda mais para smartphones */
+    }
+}
+
 
 
     h3 {
