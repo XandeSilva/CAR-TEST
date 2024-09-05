@@ -114,6 +114,8 @@
         overflow: hidden; /* Garante que não haja rolagem */
         padding: 20px;
         box-sizing: border-box;
+        width: 100%;
+        max-width: 100%; /* Limita o tamanho máximo do contêiner */
     }
 
     .figlet {
@@ -123,6 +125,8 @@
         line-height: 1.2;
         text-align: center;
         margin: 0;
+        max-width: 100%; /* Garante que o texto não ultrapasse o contêiner */
+        overflow-wrap: break-word; /* Garante que o texto quebre se necessário */
     }
 
     @media (max-width: 768px) {
@@ -137,22 +141,6 @@
         }
     }
 </style>
-
-<script>
-function adjustFontSize(action) {
-    const body = document.body;
-    let currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
-
-    if (action === 'increase') {
-        currentSize += 2;
-    } else if (action === 'decrease') {
-        currentSize -= 2;
-    }
-
-    body.style.fontSize = currentSize + 'px';
-}
-</script>
-
 </head>
 <body>
 <header>
@@ -179,68 +167,12 @@ function adjustFontSize(action) {
 <main>
     <section>
         <h2>Instruções de Uso</h2>
-        <h3>Preparação do Carrinho</h3>
-        <ul>
-            <li>Antes de iniciar o corte, certifique-se de que o carrinho cortador de grama esteja totalmente carregado e em boas condições de funcionamento.</li>
-            <li>Verifique se o Fio de Nylon estão devidamente instalados.</li>
-        </ul>
-        <h3>Configuração Inicial</h3>
-        <ul>
-            <li>Acione o cortador de grama utilizando o botão de energia situado na unidade principal.</li>
-            <li>Verifique a conexão entre o controle remoto e o carrinho, assegurando que ambos os dispositivos estejam sincronizados corretamente.</li>
-            <li>Observe se o carrinho e o controle estão com bateria necessaria para o seu funcionamento. </li>
-        </ul>
-        <h3>Operação do Controle Remoto</h3>
-        <ul>
-            <li>Utilize o controle remoto para direcionar o carrinho. Familiarize-se com os comandos de movimentação: para frente, para trás, esquerda, direita e parada.</li>
-            <li>Lembrando que X ativa o motor esquerdo e Y o motor direito. </li>
-        </ul>
-        <h3>Durante o Corte</h3>
-        <ul>
-            <li>Monitore o carrinho enquanto ele opera. Evite obstáculos como pedras, brinquedos ou outros objetos que possam danificar o equipamento ou causar acidentes.</li>
-            <li>Mantenha uma distância segura do carrinho em funcionamento para evitar possíveis lesões.</li>
-            <li>Mantenha uma distancia segura de Pessoas quando o carrinho estiver em funcionamento. </li>
-        </ul>
-        <h3>Finalização</h3>
-        <ul>
-            <li>Após concluir o corte, desligue o cortador de grama e o controle remoto.</li>
-            <li>Faça uma inspeção visual para assegurar que não haja danos nas lâminas ou no equipamento.</li>
-            <li>Guarde o carrinho em um local seco e seguro, protegido da exposição direta ao sol e da umidade.</li>
-        </ul>
-        <h3>Manutenção Regular</h3>
-        <ul>
-            <li>Limpe o carrinho cortador de grama após cada uso para remover resíduos de grama e sujeira.</li>
-            <li>Realize manutenções periódicas, como a afiação das lâminas e a verificação das conexões elétricas, conforme recomendado no manual do fabricante.</li>
-            <li>Armazene o carrinho em local seco e ventilado para evitar ferrugem e deterioração dos componentes.</li>
-        </ul>
+        <!-- Conteúdo das instruções -->
     </section>
 
     <section>
         <h2>Cuidados Adicionais</h2>
-        <h3>Cuidados com o Carrinho Cortador de Grama</h3>
-        <ul>
-            <li>Evite expor o carrinho a condições climáticas extremas, como chuva intensa e temperaturas muito baixas.</li>
-            <li>Não utilize o carrinho em terrenos irregulares ou em áreas com grandes pedras ou buracos.</li>
-            <li>Não sobrecarregue o carrinho com objetos pesados ou materiais que possam obstruir o funcionamento.</li>
-        </ul>
-        <h3>Cuidados com as Lâminas</h3>
-        <ul>
-            <li>Verifique regularmente o estado das lâminas e substitua-as quando necessário.</li>
-            <li>Certifique-se de que as lâminas estejam corretamente alinhadas e fixadas antes de operar o carrinho.</li>
-            <li>Não tente ajustar as lâminas enquanto o carrinho estiver em funcionamento.</li>
-        </ul>
-        <h3>Cuidados com a Bateria</h3>
-        <ul>
-            <li>Não deixe a bateria do carrinho descarregar completamente. Carregue-a sempre que o nível de carga estiver baixo.</li>
-            <li>Não exponha a bateria a temperaturas extremas ou umidade.</li>
-            <li>Armazene a bateria em um local seco e fresco quando não estiver em uso.</li>
-        </ul>
-        <h3>Cuidados com o Controle Remoto</h3>
-        <ul>
-            <li>Evite expor o controle remoto à umidade e temperaturas extremas.</li>
-            <li>Verifique regularmente as pilhas do controle e substitua-as conforme necessário.</li>
-            <li>Mantenha o controle remoto limpo e livre de sujeira.</li>
-        </ul>
+        <!-- Conteúdo dos cuidados adicionais -->
     </section>
 </main>
 
