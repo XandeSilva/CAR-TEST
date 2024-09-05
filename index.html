@@ -111,33 +111,33 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden; /* Garante que não haja rolagem */
+        width: 100%;
+        max-width: 100%;
         padding: 20px;
         box-sizing: border-box;
-        width: 100%;
-        max-width: 100%; /* Limita o tamanho máximo do contêiner */
+        overflow: hidden;
     }
 
     .figlet {
         font-family: monospace;
-        white-space: pre; /* Evita quebra de linha automática */
-        font-size: 16px; /* Tamanho de fonte ajustado */
+        white-space: pre;
+        font-size: 16px; /* Ajuste conforme necessário */
         line-height: 1.2;
         text-align: center;
         margin: 0;
-        max-width: 100%; /* Garante que o texto não ultrapasse o contêiner */
-        overflow-wrap: break-word; /* Garante que o texto quebre se necessário */
+        max-width: 100%;
+        overflow-wrap: break-word;
     }
 
     @media (max-width: 768px) {
         .figlet {
-            font-size: 14px; /* Reduz o tamanho da fonte em tablets */
+            font-size: 14px;
         }
     }
 
     @media (max-width: 480px) {
         .figlet {
-            font-size: 12px; /* Reduz ainda mais para smartphones */
+            font-size: 12px;
         }
     }
 </style>
