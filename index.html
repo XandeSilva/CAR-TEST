@@ -10,7 +10,6 @@
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
-        background-size: cover;
         font-size: 20px;
         color: #000000;
     }
@@ -25,9 +24,9 @@
     }
 
     .textINTRO {
-       font-size: 200%;
-       text-align: center;
-       font-family: 'Roboto';
+        font-size: 200%;
+        text-align: center;
+        font-family: 'Roboto';
     }
 
     main {
@@ -108,95 +107,33 @@
         transform: scale(1);
     }
 
-    .figlet {
-    font-family: monospace;
-    white-space: pre;
-    font-size: 10px; /* Tamanho pequeno fixo */
-    line-height: 1; 
-    text-align: center;
-    margin: 20px 0;
-    overflow-x: auto; /* Permite rolagem horizontal caso o texto ultrapasse a largura da tela */
-}
-
-@media (max-width: 768px) {
-    .figlet {
-        font-size: 8px; /* Tamanho menor para telas de tablets ou smartphones */
-    }
-}
-
-@media (max-width: 480px) {
-    .figlet {
-        font-size: 6px; /* Tamanho ainda menor para smartphones */
-    }
-}
-
-
-
-
-    h3 {
-        font-family: 'Playfair Display', serif;
-        color: black;
-        font-weight: bold;
+    .figlet-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: auto; /* Permite rolagem horizontal */
+        padding: 20px;
+        box-sizing: border-box;
     }
 
-    li {
-        font-family: 'Playfair Display', serif;
-        color: #1C1C1C;
-        font-weight: 400;
+    .figlet {
+        font-family: monospace;
+        white-space: pre;
+        font-size: 10px; /* Tamanho fixo pequeno */
+        line-height: 1.2; 
+        text-align: center;
+        margin: 0;
     }
 
     @media (max-width: 768px) {
-        .TEXTCAB {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .font-size-buttons {
-            margin-top: 10px;
-            width: 100%;
-            justify-content: space-between;
-        }
-
-        main {
-            margin: 10px;
-            padding: 10px;
-        }
-
-        header, footer {
-            padding: 10px;
-        }
-
         .figlet {
-            font-size: 5vw; /* Ajuste menor para dispositivos com largura menor */
-            width: 80%;
-            margin: 0 auto;
+            font-size: 8px; /* Reduz o tamanho da fonte em tablets e celulares */
         }
     }
 
     @media (max-width: 480px) {
-        .TEXTCAB {
-            text-align: center;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .font-size-buttons {
-            flex-direction: column;
-            width: 100%;
-            gap: 5px;
-        }
-
-        main {
-            margin: 5px;
-            padding: 5px;
-        }
-
-        header, footer {
-            padding: 5px;
-        }
-
         .figlet {
-            font-size: 6vw; /* Ajuste mais adequado para dispositivos muito pequenos */
+            font-size: 6px; /* Reduz ainda mais para smartphones */
         }
     }
 </style>
@@ -228,8 +165,8 @@ function adjustFontSize(action) {
     </div>
 </header>
 
-<div class="figlet">
-    <pre>
+<div class="figlet-container">
+    <pre class="figlet">
 ██████╗████████╗    ██████╗ ███████╗███████╗████████╗██████╗  ██████╗ ██╗   ██╗███████╗██████╗ 
 ██╔════╝╚══██╔══╝    ██╔══██╗██╔════╝██╔════╝╚══██╔══╝██╔══██╗██╔═══██╗╚██╗ ██╔╝██╔════╝██╔══██╗
 ██║  ███╗  ██║       ██║  ██║█████╗  ███████╗   ██║   ██████╔╝██║   ██║ ╚████╔╝ █████╗  ██████╔╝
@@ -268,13 +205,27 @@ function adjustFontSize(action) {
         <ul>
             <li>Após concluir o corte, desligue o cortador de grama e o controle remoto.</li>
             <li>Faça uma inspeção visual para assegurar que não haja danos nas lâminas ou no equipamento.</li>
-            <li>Guarde o equipamento em local adequado, protegido de intempéries.</li>
+            <li>Guarde o carrinho em um local seco e seguro, protegido da exposição direta ao sol e da umidade.</li>
+        </ul>
+        <h3>Manutenção Regular</h3>
+        <ul>
+            <li>Limpe o carrinho cortador de grama após cada uso para remover resíduos de grama e sujeira.</li>
+            <li>Realize manutenções periódicas, como a afiação das lâminas e a verificação das conexões elétricas, conforme indicado no manual do usuário.</li>
+            <li>Substitua quaisquer peças desgastadas ou danificadas para garantir a longevidade e o desempenho ideal do equipamento.</li>
+            <li>Lembre que o carrinho não é 100% a prova de aguá então tome cuidado com a chuva.</li>
+        </ul>
+
+        <h3>Cuidados Com o Controle</h3>
+        <ul>
+            <li>Evite expor o controle remoto à umidade e temperaturas extremas.</li>
+            <li>Verifique regularmente as pilhas do controle e substitua-as conforme necessário.</li>
+            <li>Mantenha o controle remoto limpo e livre de sujeira.</li>
         </ul>
     </section>
 </main>
 
 <footer>
-    <p>GT DESTROYER &copy; 2024</p>
+    <p>© 2024 Manual do Usuário - Todos os direitos reservados.</p>
 </footer>
 </body>
 </html>
